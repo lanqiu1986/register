@@ -1,0 +1,21 @@
+<%= simple_form_for @resume do |f| %>
+
+<% if @resume.errors.any? %>
+<ul>
+  <% @resume.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<div class="form-group">
+  <%= f.input :name, input_html: { class: "form-control"} %>
+  <%= f.input :gender, input_html: { class: "form-control"} %>
+  <%= f.input :age, input_html: { class: "form-control"} %>
+  <%= f.input :school, input_html: { class: "form-control"} %>
+  <%= f.input :major, input_html: { class: "form-control"} %>
+  <%= f.input :phonenumber, input_html: { class: "form-control"} %>
+  <%= f.input :attachment, input_html: { class: "form-control"} %>
+</div>
+<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
+<% end %>

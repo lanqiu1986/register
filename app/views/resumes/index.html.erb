@@ -1,0 +1,45 @@
+<div class="col-md-12">
+  <div class="resume">
+    <%= link_to("New resume", new_resume_path, class: "btn btn-primary pull-right") %>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+        <td>毕业学校</td>
+        <td>主修专业</td>
+        <td>联系电话</td>
+        <td>简历</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @resumes.each do |resume| %>
+        <tr>
+          <td>#</td>
+          <td><%= resume.name %></td>
+          <td><%= resume.gender %></td>
+          <td><%= resume.age %></td>
+          <td><%= resume.school %></td>
+          <td><%= resume.major %></td>
+          <td><%= resume.phonenumber %></td>
+          <td>
+            <% if resume.attachment.present? %>
+              <i class="fa fa-paperclip"></i>
+              <%= link_to("下载简历", resume.attachment_url) %>
+            <% else %>
+              没有提交简历
+            <% end %>
+          </td>
+          <td>
+              <%= link_to("Edit", edit_resume_path(resume), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", resume_path(resume),    class: "btn btn-sm btn-default",
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

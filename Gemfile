@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'pg'
+gem 'simple_form'
+gem 'carrierwave'
+
 group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'

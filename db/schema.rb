@@ -10,18 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171122080134) do
+ActiveRecord::Schema.define(version: 20171122125006) do
 
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
-    t.string   "school"
+    t.string   "schoollast"
     t.string   "gender"
-    t.string   "major"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "majorlast"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "attachment"
     t.string   "phonenumber"
+    t.integer  "post_id"
+    t.date     "datebirth"
+    t.string   "educationfirst"
+    t.string   "educationlast"
+    t.string   "degreefirst"
+    t.string   "degreelast"
+    t.string   "majorfirst"
+    t.string   "schoolfirst"
   end
 
 end

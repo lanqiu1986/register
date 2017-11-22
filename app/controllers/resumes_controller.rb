@@ -38,7 +38,7 @@ class ResumesController < ApplicationController
   def destroy
     @resume = Resume.find(params[:id])
     @resume.destroy
-    flash[:alert] = "resume deleted"
+    flash[:alert] = "简历已经删除！"
     redirect_to resumes_path
   end
 

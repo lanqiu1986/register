@@ -9,16 +9,32 @@
 <% end %>
 
 <div class="form-group">
+  <%= f.input :post_id, input_html: { class: "form-control"} %>
   <%= f.input :name, input_html: { class: "form-control"} %>
-  <%= f.input :age, input_html: { class: "form-control"} %>
+
   <% Resume::GENDER.each do |gender| %>
     <label>
       <%= f.radio_button :gender, gender %>
       <%= t(gender, :scope => "resume.gender") %>
     </label>
   <% end %>
-  <%= f.input :school, input_html: { class: "form-control"} %>
-  <%= f.input :major, input_html: { class: "form-control"} %>
+  <%= f.input :age, input_html: { class: "form-control"} %>
+  <%= f.input :datebirth, input_html: { class: "form-control"} %>
+  <hr>
+  <%= f.label :educationfirst %>
+  <%= f.select :educationfirst, Resume::EDUCATION.map{ |s| [t(s, :scope => "resume.educationfirst"),s] }, {}, :class => "form-control" %>
+  <%= f.label :degreefirst %>
+  <%= f.select :degreefirst, Resume::DEGREE.map{ |s| [t(s, :scope => "resume.degreefirst"),s] }, {}, :class => "form-control" %>
+  <%= f.input :schoolfirst, input_html: { class: "form-control"} %>
+  <%= f.input :majorfirst, input_html: { class: "form-control"} %>
+  <hr>
+  <%= f.label :educationlast %>
+  <%= f.select :educationlast, Resume::EDUCATION.map{ |s| [t(s, :scope => "resume.educationlast"),s] }, {}, :class => "form-control" %>
+  <%= f.label :degreelast %>
+  <%= f.select :degreelast, Resume::DEGREE.map{ |s| [t(s, :scope => "resume.degreelast"),s] }, {}, :class => "form-control" %>
+  <%= f.input :schoollast, input_html: { class: "form-control"} %>
+  <%= f.input :majorlast, input_html: { class: "form-control"} %>
+  <hr>
   <%= f.input :phonenumber, input_html: { class: "form-control"} %>
   <%= f.input :attachment, input_html: { class: "form-control"} %>
 </div>

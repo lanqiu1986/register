@@ -2,11 +2,18 @@ zh-CN:
   activerecord:
     attributes:
       resume:
+        post_id: 申报岗位
         name: "姓名"
         age: "年龄"
         gender: "性别"
-        school: "毕业院校"
-        major: "主修专业"
+        datebirth: 出生日期
+        educationfirst: 初始学历
+        educationlast: 最后学历
+        degreefirst: "初始学位"
+        degreelast: "最高学位"
+        schoolfirst: "初始学历毕业院校"
+        schoollast: "最后学历毕业院校"
+        majorfirst: "所学专业"
+        majorlast: "所学专业"
         phonenumber: "联系电话"
         attachment: "简历"
-  

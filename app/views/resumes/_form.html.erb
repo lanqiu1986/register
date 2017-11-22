@@ -10,8 +10,13 @@
 
 <div class="form-group">
   <%= f.input :name, input_html: { class: "form-control"} %>
-  <%= f.input :gender, input_html: { class: "form-control"} %>
   <%= f.input :age, input_html: { class: "form-control"} %>
+  <% Resume::GENDER.each do |gender| %>
+    <label>
+      <%= f.radio_button :gender, gender %>
+      <%= t(gender, :scope => "resume.gender") %>
+    </label>
+  <% end %>
   <%= f.input :school, input_html: { class: "form-control"} %>
   <%= f.input :major, input_html: { class: "form-control"} %>
   <%= f.input :phonenumber, input_html: { class: "form-control"} %>

@@ -5,7 +5,9 @@ class Resume < ApplicationRecord
   validates :gender, presence: true
   validates :school, presence: true
   validates :major, presence: true
-  validates :phonenumber, presence: true, length: {is: 6}
+  validates :phonenumber, presence: true, length: {is: 11}
+  GENDER = ["男","女"]
+  validates_inclusion_of :gender, :in => GENDER
 
 
 end

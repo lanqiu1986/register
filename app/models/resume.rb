@@ -5,6 +5,7 @@ class Resume < ApplicationRecord
   validates :gender, presence: true
   validates :school, presence: true
   validates :major, presence: true
+  validates :phonenumber, presence: true, length: {is: 6}
 
 
 end

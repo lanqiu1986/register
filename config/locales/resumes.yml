@@ -1,0 +1,11 @@
+zh-CN:
+  activerecord:
+    attributes:
+      resume:
+        name: "工作内容"
+        age: "年龄"
+        gender: "性别"
+        school: "毕业院校"
+        major: "主修专业"
+        phonenumber: "联系电话"
+        attachment: "简历"

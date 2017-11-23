@@ -39,6 +39,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'bootstrap-datepicker-rails'
+gem 'bcrypt', '3.1.11'
 
 group :development, :test do
   gem 'capistrano-rails'

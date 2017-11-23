@@ -9,7 +9,10 @@
 <% end %>
 
 <div class="form-group">
-  <%= f.input :post_id, input_html: { class: "form-control"} %>
+  <div class="form-group">
+    <%= f.label :post_id %>
+    <%= f.select :post_id,  Post.all.map{ |c| [c.name, c.id]}, {}, :class => "form-control",  :prompt => '选择申报岗位' %>
+  </div>
   <%= f.input :name, input_html: { class: "form-control"} %>
 
   <% Resume::GENDER.each do |gender| %>

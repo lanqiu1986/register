@@ -13,5 +13,6 @@ class Resume < ApplicationRecord
   validates_inclusion_of :degreefirst, :in => DEGREE
   validates_inclusion_of :degreelast, :in => DEGREE
 
+  belongs_to :post, :optional => true
 
 end

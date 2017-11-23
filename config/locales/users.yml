@@ -1,0 +1,7 @@
+zh-CN:
+  activerecord:
+    attributes:
+      user:
+        name: 用户名
+        password: 密码
+        password_confirmation: 密码确认

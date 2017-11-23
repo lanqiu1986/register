@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="resume">
-    <%= link_to("New resume", new_resume_path, class: "btn btn-primary pull-right") %>
+    <%= link_to("新增简历", new_resume_path, class: "btn btn-primary pull-right") %>
   </div>
   <table class="table table-hover">
     <thead>
@@ -22,8 +22,8 @@
       <% if logged_in? %>
       <% @resumes.each do |resume| %>
         <tr>
-          <td><%= resume.post%></td>
-          <td><%= resume.name %></td>
+          <td><%= resume.post.name %></td>
+          <td><%= link_to(resume.name, resume_path(resume) )%></td>
           <td><%= resume.gender %></td>
           <td><%= resume.age %></td>
           <td><%= resume.datebirth %></td>

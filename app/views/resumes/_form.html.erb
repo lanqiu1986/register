@@ -19,7 +19,10 @@
     </label>
   <% end %>
   <%= f.input :age, input_html: { class: "form-control"} %>
-  <%= f.input :datebirth, input_html: { class: "form-control"} %>
+  <div class="form-group">
+    <%= f.label :datebirth %>
+    <%= f.text_field :datebirth, :class => "form-control" %>
+  </div>
   <hr>
   <%= f.label :educationfirst %>
   <%= f.select :educationfirst, Resume::EDUCATION.map{ |s| [t(s, :scope => "resume.educationfirst"),s] }, {}, :class => "form-control" %>
@@ -40,3 +43,13 @@
 </div>
 <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
 <% end %>
+
+
+<script>
+  $("#resume_datebirth").datepicker({
+    format: "yyyy-mm-dd",
+    language: "<%= I18n.locale %>",
+    todayHighlight: true,
+    autoclose: true
+});
+</script>

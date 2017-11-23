@@ -38,6 +38,7 @@ gem 'bootstrap-sass'
 gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'capistrano-rails'

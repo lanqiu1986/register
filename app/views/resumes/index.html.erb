@@ -19,9 +19,10 @@
       </tr>
     </thead>
     <tbody>
+      <% if logged_in? %>
       <% @resumes.each do |resume| %>
         <tr>
-          <td><%= resume.post.name %></td>
+          <td><%= resume.post%></td>
           <td><%= resume.name %></td>
           <td><%= resume.gender %></td>
           <td><%= resume.age %></td>
@@ -45,6 +46,8 @@
                           method: :delete, data: { confirm: "Are you sure?" } )%>
           </td>
         </tr>
+      <% end %>
+      <% else %>
       <% end %>
     </tbody>
   </table>

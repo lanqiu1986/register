@@ -1,0 +1,5 @@
+zh-CN:
+  activerecord:
+    attributes:
+      post:
+        name: 岗位名称

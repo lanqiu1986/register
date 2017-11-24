@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap/alert
+//= require bootstrap/dropdown
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN

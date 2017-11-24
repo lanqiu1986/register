@@ -22,7 +22,7 @@
       <% if logged_in? %>
       <% @resumes.each do |resume| %>
         <tr>
-          <td><%= resume.post%></td>
+          <td><%= resume.post.try(:name)%></td>
           <td><%= resume.name %></td>
           <td><%= resume.gender %></td>
           <td><%= resume.age %></td>
